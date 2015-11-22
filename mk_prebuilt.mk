@@ -46,7 +46,7 @@ STUB := $(shell mkdir -p out/target/product/$(MK_BUILD)/system/app/GoogleIntl/li
 endif
 
 PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*.apk,vendor/private/google/app/GooglePinYin/$(MK_CPU_ABI),system/app/GooglePinYin) \
-    $(call find-copy-subdir-files,*.so,vendor/private/google/app/GooglePinYin/$(MK_CPU_ABI),system) \
-    $(call find-copy-subdir-files,*.apk,vendor/private/google/app/GoogleIntl/$(MK_CPU_ABI),system/app/GoogleIntl) \
-    $(call find-copy-subdir-files,*.so,vendor/private/google/app/GoogleIntl/$(MK_CPU_ABI),system)
+    $(call find-copy-subdir-files,*.apk,vendor/private/google/GooglePinYin/$(MK_CPU_ABI),system/app/GooglePinYin) \
+    $(call find-copy-subdir-files,*.so,vendor/private/google/GooglePinYin/$(MK_CPU_ABI),system) \
+    $(call find-copy-subdir-files,*.apk,vendor/private/google/GoogleIntl/$(MK_CPU_ABI),system/app/GoogleIntl) \
+    $(call find-copy-subdir-files,*.so,vendor/private/google/GoogleIntl/$(MK_CPU_ABI),system)
