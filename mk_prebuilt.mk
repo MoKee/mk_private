@@ -1,3 +1,7 @@
+# Use all private apps
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,vendor/private/priv-app/,system/priv-app)
+
 # Use all private binaries
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,vendor/private/bin/$(MK_CPU_ABI),system/bin)
