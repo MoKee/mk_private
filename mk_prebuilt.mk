@@ -1,7 +1,6 @@
 # Use all private apps
 PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,vendor/private/app/,system/app) \
-    $(call find-copy-subdir-files,*,vendor/private/priv-app/,system/priv-app)
+    $(call find-copy-subdir-files,*,vendor/private/app/,system/app)
 
 # Use all private binaries
 PRODUCT_COPY_FILES += \
