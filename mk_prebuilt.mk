@@ -33,9 +33,8 @@ PRODUCT_COPY_FILES += \
     $(foreach app, $(shell ls $(GAPPS_ROOT_PATH)),$(call find-copy-subdir-files,*.apk,$(GAPPS_ROOT_PATH)/$(app)/$(MK_CPU_ABI),system/app/$(app))) \
     $(foreach app, $(shell ls $(GAPPS_ROOT_PATH)),$(call find-copy-subdir-files,*.so,$(GAPPS_ROOT_PATH)/$(app)/$(MK_CPU_ABI),system))
 
-# V4a apps
+# V4a modules
 ifneq ($(filter armeabi armeabi-v7a,$(MK_CPU_ABI)),)
 PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,vendor/private/viper/app,system/app) \
     $(call find-copy-subdir-files,*.so,vendor/private/viper/lib/armeabi-v7a/soundfx,system/lib/soundfx)
 endif
