@@ -21,6 +21,7 @@ PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,mokee-phonelocation.dat,vendor/private/common/media/location,system/media/location)
 
 # Google apps
+ifneq ($(filter armeabi armeabi-v7a arm64-v8a,$(MK_CPU_ABI)),)
 GAPPS_ROOT_PATH := vendor/private/google
 ifeq ($(MK_CPU_ABI),arm64-v8a)
 $(shell $(foreach app, $(shell ls $(GAPPS_ROOT_PATH)),mkdir -p out/target/product/$(MK_BUILD)/system/app/$(app)/lib/arm64; \
@@ -32,6 +33,10 @@ endif
 PRODUCT_COPY_FILES += \
     $(foreach app, $(shell ls $(GAPPS_ROOT_PATH)),$(call find-copy-subdir-files,*.apk,$(GAPPS_ROOT_PATH)/$(app)/$(MK_CPU_ABI),system/app/$(app))) \
     $(foreach app, $(shell ls $(GAPPS_ROOT_PATH)),$(call find-copy-subdir-files,*.so,$(GAPPS_ROOT_PATH)/$(app)/$(MK_CPU_ABI),system))
+else
+PRODUCT_PACKAGES += \
+    LatinIME
+endif
 
 # V4a modules
 ifneq ($(filter armeabi armeabi-v7a,$(MK_CPU_ABI)),)
