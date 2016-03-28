@@ -41,5 +41,5 @@ endif
 # V4a modules
 ifneq ($(MK_CPU_ABI),arm64-v8a)
 PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*.so,vendor/private/viper/lib/$(MK_CPU_ABI)/soundfx,system/lib/soundfx)
+    $(call find-copy-subdir-files,*.so,vendor/private/viper/lib/$(MK_CPU_ABI),system/lib)
 endif
