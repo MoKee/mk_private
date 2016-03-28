@@ -39,7 +39,7 @@ PRODUCT_PACKAGES += \
 endif
 
 # V4a modules
-ifneq ($(filter armeabi armeabi-v7a,$(MK_CPU_ABI)),)
+ifneq ($(MK_CPU_ABI),arm64-v8a)
 PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*.so,vendor/private/viper/lib/armeabi-v7a/soundfx,system/lib/soundfx)
+    $(call find-copy-subdir-files,*.so,vendor/private/viper/lib/$(MK_CPU_ABI)/soundfx,system/lib/soundfx)
 endif
