@@ -20,18 +20,18 @@ include $(CLEAR_VARS)
 LOCAL_MODULE := GoogleIntl
 LOCAL_MODULE_TAGS := optional
 
-LOCAL_SRC_FILES := GoogleIntl.apk
-
 LOCAL_MODULE_CLASS := APPS
 LOCAL_BUILT_MODULE_STEM := package.apk
 LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
 LOCAL_CERTIFICATE := PRESIGNED
 
 ifeq ($(TARGET_ARCH),arm)
+LOCAL_SRC_FILES := GoogleIntl-x32.apk
 LOCAL_PREBUILT_JNI_LIBS := \
     lib/armeabi-v7a/libjni_keyboarddecoder.so \
     lib/armeabi-v7a/libjni_unbundled_latinimegoogle.so
 else
+LOCAL_SRC_FILES := GoogleIntl-x64.apk
 LOCAL_PREBUILT_JNI_LIBS := \
     lib/arm64-v8a/libjni_keyboarddecoder.so \
     lib/arm64-v8a/libjni_unbundled_latinimegoogle.so
