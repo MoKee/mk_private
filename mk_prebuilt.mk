@@ -23,9 +23,11 @@ PRODUCT_COPY_FILES += \
 # Google apps
 ifeq ($(filter armeabi armeabi-v7a arm64-v8a,$(MK_CPU_ABI)),)
 PRODUCT_PACKAGES += \
+    Browser \
     LatinIME
 else
 PRODUCT_PACKAGES += \
+    Chromium \
     GoogleIntl \
     GooglePinYin
 endif
