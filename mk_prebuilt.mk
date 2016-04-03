@@ -40,8 +40,6 @@ endif
 endif
 
 # V4a modules
-PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*.so,vendor/private/viper/lib/$(MK_CPU_ABI),system/lib)
 ifeq ($(filter armeabi armeabi-v7a x86,$(MK_CPU_ABI)),)
 PRODUCT_PACKAGES += \
     AudioFX
@@ -53,4 +51,6 @@ else
 PRODUCT_PACKAGES += \
     ViPER4Android
 endif
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*.so,vendor/private/viper/lib/$(MK_CPU_ABI),system/lib)
 endif
