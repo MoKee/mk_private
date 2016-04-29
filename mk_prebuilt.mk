@@ -1,5 +1,6 @@
 # Use all private apps
 PRODUCT_PACKAGES += \
+    AMapNetworkLocation \
     MoKeePay
 
 # Use all private binaries
