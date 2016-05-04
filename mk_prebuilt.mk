@@ -1,6 +1,7 @@
 # Use all private apps
 PRODUCT_PACKAGES += \
     AMapNetworkLocation \
+    MoKeeWeatherProvider \
     MoKeePay
 
 # Use all private binaries
