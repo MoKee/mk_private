@@ -27,7 +27,7 @@ PRODUCT_PACKAGES += \
     Browser \
     LatinIME
 else
-ifneq ($(filter i9100, $(MK_BUILD)),)
+ifneq ($(filter i9100 cancro, $(MK_BUILD)),)
 PRODUCT_PACKAGES += \
     Browser \
     GoogleIntl \
