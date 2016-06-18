@@ -55,3 +55,8 @@ endif
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*.so,vendor/private/viper/lib/$(MK_CPU_ABI),system/lib)
 endif
+
+# Disable dex-preopt of some devices to save space, if requested.
+ifneq ($(filter armani cancro i9100 umts_spyder spyder maserati targa, $(MK_BUILD)),)
+WITH_DEXPREOPT := false
+endif
