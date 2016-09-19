@@ -40,6 +40,9 @@ PRODUCT_PACKAGES += \
 endif
 endif
 
+PRODUCT_PACKAGES += \
+    AudioFX
+
 # V4a modules
 # ifeq ($(filter armeabi armeabi-v7a x86,$(MK_CPU_ABI)),)
 # PRODUCT_PACKAGES += \
