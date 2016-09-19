@@ -21,15 +21,15 @@ endif
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,mokee-phonelocation.dat,vendor/private/mokee/common/media/location,system/media/location)
 
-# Google and Browser apps
+# Google and Browser2 apps
 ifeq ($(filter armeabi armeabi-v7a arm64-v8a,$(MK_CPU_ABI)),)
 PRODUCT_PACKAGES += \
-    Browser \
+    Browser2 \
     LatinIME
 else
 ifneq ($(filter armani cancro dior i9100 tomato, $(MK_BUILD)),)
 PRODUCT_PACKAGES += \
-    Browser \
+    Browser2 \
     GoogleIntl \
     GooglePinYin
 else
