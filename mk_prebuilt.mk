@@ -24,12 +24,12 @@ PRODUCT_COPY_FILES += \
 # Google and Browser2 apps
 ifeq ($(filter armeabi armeabi-v7a arm64-v8a,$(MK_CPU_ABI)),)
 PRODUCT_PACKAGES += \
-    Browser2 \
+    Browser \
     LatinIME
 else
 ifneq ($(filter armani cancro dior i9100 tomato, $(MK_BUILD)),)
 PRODUCT_PACKAGES += \
-    Browser2 \
+    Browser \
     GoogleIntl \
     GooglePinYin
 else
