@@ -45,7 +45,7 @@ ifeq ($(filter armeabi armeabi-v7a arm64-v8a x86,$(MK_CPU_ABI)),)
 PRODUCT_PACKAGES += \
     AudioFX
 else
-ifneq ($(filter shamu victara victara_retcn gemini, $(MK_BUILD)),)
+ifneq ($(filter shamu victara victara_retcn gemini angler oneplus3, $(MK_BUILD)),)
 PRODUCT_PACKAGES += \
     AudioFX
 else
