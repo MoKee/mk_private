@@ -57,6 +57,6 @@ PRODUCT_COPY_FILES += \
 endif
 
 # Disable dex-preopt of some devices to save space, if requested.
-ifneq ($(filter i9100 umts_spyder spyder maserati targa, $(MK_BUILD)),)
+ifneq ($(filter armani i9100 umts_spyder spyder maserati targa, $(MK_BUILD)),)
 WITH_DEXPREOPT := false
 endif
