@@ -27,7 +27,7 @@ PRODUCT_PACKAGES += \
     Browser \
     LatinIME
 else
-ifneq ($(filter armani dior i9100 tomato, $(MK_BUILD)),)
+ifneq ($(filter armani dior i9100 tomato deb flo, $(MK_BUILD)),)
 PRODUCT_PACKAGES += \
     Browser \
     GoogleIntl \
