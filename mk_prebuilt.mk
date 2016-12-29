@@ -1,7 +1,8 @@
 # Use all private apps
 PRODUCT_PACKAGES += \
     BigBang \
-    MoKeePay
+    MoKeePay \
+    Substratum
 
 # Use all private binaries
 PRODUCT_COPY_FILES += \
