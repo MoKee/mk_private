@@ -20,7 +20,6 @@ include $(CLEAR_VARS)
 
 LOCAL_MODULE := Substratum
 LOCAL_MODULE_TAGS := optional
-LOCAL_PRIVILEGED_MODULE := true
 
 LOCAL_SRC_FILES := Substratum.apk
 
