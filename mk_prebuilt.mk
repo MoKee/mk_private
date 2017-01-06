@@ -22,7 +22,7 @@ endif
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,mokee-phonelocation.dat,vendor/private/mokee/common/media/location,system/media/location)
 
-# Google and Browser2 apps
+# Default input method and Browser apps
 ifeq ($(filter armeabi armeabi-v7a arm64-v8a,$(MK_CPU_ABI)),)
 PRODUCT_PACKAGES += \
     Browser \
@@ -31,16 +31,21 @@ else
 ifneq ($(filter armani dior i9100 tomato deb flo, $(MK_BUILD)),)
 PRODUCT_PACKAGES += \
     Browser \
-    GoogleIntl \
     GooglePinYin
 else
 PRODUCT_PACKAGES += \
     YuBrowser \
-    GoogleIntl \
     GooglePinYin
 endif
 endif
 
+# Extra input method app
+ifeq ($(filter armani, $(MK_BUILD)),)
+PRODUCT_PACKAGES += \
+    GoogleIntl
+endif
+
+# Default sound effects app
 PRODUCT_PACKAGES += \
     AudioFX
 
