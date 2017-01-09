@@ -28,7 +28,7 @@ PRODUCT_PACKAGES += \
     Browser \
     LatinIME
 else
-ifneq ($(filter armani dior i9100 tomato deb flo, $(MK_BUILD)),)
+ifneq ($(filter armani deb dior flo i9100 mako tomato, $(MK_BUILD)),)
 PRODUCT_PACKAGES += \
     Browser \
     GooglePinYin
