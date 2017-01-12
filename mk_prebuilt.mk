@@ -22,27 +22,31 @@ endif
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,mokee-phonelocation.dat,vendor/private/mokee/common/media/location,system/media/location)
 
+ifneq ($(filter armani dior flo deb mako condor tomato, $(MK_BUILD)),)
+BOARD_SYSTEMIMAGE_PARTITION_LOW := true
+endif
+
 # Default input method and Browser apps
 ifeq ($(filter armeabi armeabi-v7a arm64-v8a,$(MK_CPU_ABI)),)
 PRODUCT_PACKAGES += \
     Browser \
     LatinIME
 else
-ifneq ($(filter armani deb dior flo i9100 mako tomato, $(MK_BUILD)),)
+ifneq ($(BOARD_SYSTEMIMAGE_PARTITION_LOW),true)
 PRODUCT_PACKAGES += \
     Browser \
     GooglePinYin
 else
 PRODUCT_PACKAGES += \
     YuBrowser \
-    GooglePinYin
+    GooglePinYin \
+    GoogleIntl
 endif
 endif
 
-# Extra input method app
-ifeq ($(filter armani, $(MK_BUILD)),)
-PRODUCT_PACKAGES += \
-    GoogleIntl
+# Disable dex-preopt of some devices to save space, if requested.
+ifneq ($(BOARD_SYSTEMIMAGE_PARTITION_LOW),true)
+WITH_DEXPREOPT := false
 endif
 
 # Default sound effects app
@@ -63,9 +67,4 @@ PRODUCT_PACKAGES += \
 # endif
 # PRODUCT_COPY_FILES += \
 #     $(call find-copy-subdir-files,*.so,vendor/private/viper/lib/$(MK_CPU_ABI),system/lib)
-# endif
-
-# Disable dex-preopt of some devices to save space, if requested.
-# ifneq ($(filter i9100 umts_spyder spyder maserati targa, $(MK_BUILD)),)
-# WITH_DEXPREOPT := false
 # endif
