@@ -22,7 +22,7 @@ endif
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,mokee-phonelocation.dat,vendor/private/mokee/common/media/location,system/media/location)
 
-ifneq ($(filter armani dior flo deb mako condor tomato, $(MK_BUILD)),)
+ifneq ($(filter armani dior flo deb mako condor tomato,$(MK_BUILD)),)
 BOARD_SYSTEMIMAGE_PARTITION_LOW := true
 endif
 
@@ -32,7 +32,7 @@ PRODUCT_PACKAGES += \
     Browser \
     LatinIME
 else
-ifneq ($(BOARD_SYSTEMIMAGE_PARTITION_LOW),true)
+ifneq ($(strip $(BOARD_SYSTEMIMAGE_PARTITION_LOW)),true)
 PRODUCT_PACKAGES += \
     Browser \
     GoogleIntl
@@ -45,7 +45,7 @@ endif
 endif
 
 # Disable dex-preopt of some devices to save space, if requested.
-ifneq ($(BOARD_SYSTEMIMAGE_PARTITION_LOW),true)
+ifneq ($(strip $(BOARD_SYSTEMIMAGE_PARTITION_LOW)),true)
 WITH_DEXPREOPT := false
 endif
 
