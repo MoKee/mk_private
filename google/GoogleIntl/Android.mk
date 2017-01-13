@@ -27,15 +27,9 @@ LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
 LOCAL_CERTIFICATE := PRESIGNED
 
 ifeq ($(TARGET_ARCH),arm)
-LOCAL_SRC_FILES := GoogleIntl-x32.apk
-LOCAL_PREBUILT_JNI_LIBS := \
-    lib/armeabi-v7a/libjni_keyboarddecoder.so \
-    lib/armeabi-v7a/libjni_unbundled_latinimegoogle.so
+LOCAL_SRC_FILES := GoogleIntl-arm.apk
 else
-LOCAL_SRC_FILES := GoogleIntl-x64.apk
-LOCAL_PREBUILT_JNI_LIBS := \
-    lib/arm64-v8a/libjni_keyboarddecoder.so \
-    lib/arm64-v8a/libjni_unbundled_latinimegoogle.so
+LOCAL_SRC_FILES := GoogleIntl-arm64.apk
 endif
 
 include $(BUILD_PREBUILT)

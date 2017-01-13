@@ -26,17 +26,9 @@ LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
 LOCAL_CERTIFICATE := PRESIGNED
 
 ifeq ($(TARGET_ARCH),arm)
-LOCAL_SRC_FILES := GooglePinYin-x32.apk
-LOCAL_PREBUILT_JNI_LIBS := \
-    lib/armeabi-v7a/liben_data_bundle.so \
-    lib/armeabi-v7a/libhmm_gesture_hwr_zh.so \
-    lib/armeabi-v7a/libpinyin_data_bundle.so
+LOCAL_SRC_FILES := GooglePinYin-arm.apk
 else
-LOCAL_SRC_FILES := GooglePinYin-x64.apk
-LOCAL_PREBUILT_JNI_LIBS := \
-    lib/arm64-v8a/liben_data_bundle.so \
-    lib/arm64-v8a/libhmm_gesture_hwr_zh.so \
-    lib/arm64-v8a/libpinyin_data_bundle.so
+LOCAL_SRC_FILES := GooglePinYin-arm64.apk
 endif
 
 include $(BUILD_PREBUILT)
