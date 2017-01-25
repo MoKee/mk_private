@@ -20,7 +20,7 @@ endif
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,mokee-phonelocation.dat,vendor/private/mokee/common/media/location,system/media/location)
 
-ifneq ($(filter armani dior flo deb mako condor tomato,$(MK_BUILD)),)
+ifneq ($(filter armani dior flo deb mako condor tomato i9100,$(MK_BUILD)),)
 SMALL_BOARD_SYSTEMIMAGE_PARTITION := true
 endif
 
