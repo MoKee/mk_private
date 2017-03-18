@@ -22,6 +22,7 @@ PRODUCT_COPY_FILES += \
 
 ifneq ($(filter armani dior flo deb mako condor tomato i9100,$(MK_BUILD)),)
 SMALL_BOARD_SYSTEMIMAGE_PARTITION := true
+TARGET_BOOTANIMATION_HALF_RES := true
 endif
 
 # Default input method and Browser apps
