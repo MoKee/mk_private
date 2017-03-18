@@ -34,7 +34,7 @@ else
 ifeq ($(SMALL_BOARD_SYSTEMIMAGE_PARTITION),true)
 PRODUCT_PACKAGES += \
     Browser \
-    GoogleIntl
+    GooglePinYin
 else
 PRODUCT_PACKAGES += \
     YuBrowser \
