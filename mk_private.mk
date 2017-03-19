@@ -35,11 +35,16 @@ ifeq ($(SMALL_BOARD_SYSTEMIMAGE_PARTITION),true)
 PRODUCT_PACKAGES += \
     Browser \
     GooglePinYin
+# Include MK audio files
+include vendor/mk/config/mk_audio_mini.mk
 else
 PRODUCT_PACKAGES += \
     YuBrowser \
     GooglePinYin \
-    GoogleIntl
+    GoogleIntl \
+    vim
+# Include MK audio files
+include vendor/mk/config/mk_audio.mk
 endif
 endif
 
