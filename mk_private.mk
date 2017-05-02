@@ -25,15 +25,15 @@ SMALL_BOARD_SYSTEMIMAGE_PARTITION := true
 TARGET_BOOTANIMATION_HALF_RES := true
 endif
 
-# Default input method and Browser apps
+# Default input method and Jelly apps
 ifeq ($(filter armeabi armeabi-v7a arm64-v8a,$(MK_CPU_ABI)),)
 PRODUCT_PACKAGES += \
-    Browser \
+    Jelly \
     LatinIME
 else
 ifeq ($(SMALL_BOARD_SYSTEMIMAGE_PARTITION),true)
 PRODUCT_PACKAGES += \
-    Browser \
+    Jelly \
     GooglePinYin
 # Include MK audio files
 include vendor/mk/config/mk_audio_mini.mk
