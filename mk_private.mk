@@ -1,6 +1,7 @@
 # Use all private apps
 PRODUCT_PACKAGES += \
-    MoKeePay
+    MoKeePay \
+    Turbo
 
 # Use all private binaries
 PRODUCT_COPY_FILES += \
