@@ -1,7 +1,12 @@
 # Use all private apps
+ifneq ($(filter kingdom,$(MK_BUILD)),)
+PRODUCT_PACKAGES += \
+    MoKeePay
+else
 PRODUCT_PACKAGES += \
     MoKeePay \
     Turbo
+endif
 
 # Use all private binaries
 PRODUCT_COPY_FILES += \
