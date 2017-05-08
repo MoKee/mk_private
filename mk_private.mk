@@ -1,5 +1,5 @@
 # Use all private apps
-ifneq ($(filter kingdom,$(MK_BUILD)),)
+ifneq ($(filter kingdom v500,$(MK_BUILD)),)
 PRODUCT_PACKAGES += \
     MoKeePay
 else
