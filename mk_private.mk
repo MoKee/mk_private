@@ -54,8 +54,14 @@ include vendor/mk/config/mk_audio.mk
 endif
 endif
 
-# Disable dex-preopt of some devices to save space, if requested.
+# Disable dex-preopt of some devices to save space.
 ifeq ($(SMALL_BOARD_SYSTEMIMAGE_PARTITION),true)
+WITH_DEXPREOPT := false
+endif
+
+# Disable dex-preopt of some devices to fix compile.
+ifneq ($(filter h811 h815,$(MK_BUILD)),)
+PRODUCT_PACKAGES += \
 WITH_DEXPREOPT := false
 endif
 
