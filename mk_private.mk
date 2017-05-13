@@ -61,7 +61,6 @@ endif
 
 # Disable dex-preopt of some devices to fix compile.
 ifneq ($(filter h811 h815,$(MK_BUILD)),)
-PRODUCT_PACKAGES += \
 WITH_DEXPREOPT := false
 endif
 
