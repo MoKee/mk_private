@@ -1,5 +1,6 @@
 # Use all private apps
 PRODUCT_PACKAGES += \
+    Jelly \
     MoKeePay
 
 # Use all private binaries
@@ -33,13 +34,11 @@ PRODUCT_PACKAGES += \
 else
 ifeq ($(SMALL_BOARD_SYSTEMIMAGE_PARTITION),true)
 PRODUCT_PACKAGES += \
-    Jelly \
     GooglePinYin
 # Include MK audio files
 include vendor/mk/config/mk_audio_mini.mk
 else
 PRODUCT_PACKAGES += \
-    YuBrowser \
     GooglePinYin \
     GoogleIntl \
     vim
