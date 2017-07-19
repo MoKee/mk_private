@@ -29,7 +29,6 @@ endif
 # Default input method and Jelly apps
 ifeq ($(filter armeabi armeabi-v7a arm64-v8a,$(MK_CPU_ABI)),)
 PRODUCT_PACKAGES += \
-    Jelly \
     LatinIME
 else
 ifeq ($(SMALL_BOARD_SYSTEMIMAGE_PARTITION),true)
