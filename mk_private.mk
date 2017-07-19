@@ -61,6 +61,11 @@ endif
 PRODUCT_PACKAGES += \
     AudioFX
 
+# Built-in Xposed
+PRODUCT_PACKAGES += \
+    libxposed_art \
+    XposedBridge
+
 # V4a modules
 # ifeq ($(filter armeabi armeabi-v7a x86,$(MK_CPU_ABI)),)
 # PRODUCT_PACKAGES += \
