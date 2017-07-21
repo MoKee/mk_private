@@ -61,12 +61,10 @@ PRODUCT_PACKAGES += \
     AudioFX
 
 # Built-in Xposed
-ifneq ($(WITH_XPOSED),false)
 PRODUCT_PACKAGES += \
     libxposed_art \
     XposedBridge \
     xposed.prop
-endif
 
 ifeq ($(MK_CPU_ABI),arm64-v8a)
 PRODUCT_COPY_FILES += \
