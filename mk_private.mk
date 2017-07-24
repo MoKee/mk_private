@@ -1,7 +1,8 @@
 # Use all private apps
 PRODUCT_PACKAGES += \
     Jelly \
-    MoKeePay
+    MoKeePay \
+    NexusLauncherPrebuilt
 
 # Use all private binaries
 PRODUCT_COPY_FILES += \
@@ -33,13 +34,13 @@ PRODUCT_PACKAGES += \
 else
 ifeq ($(SMALL_BOARD_SYSTEMIMAGE_PARTITION),true)
 PRODUCT_PACKAGES += \
-    GooglePinYin
+    GooglePinyinIME
 # Include MK audio files
 include vendor/mk/config/mk_audio_mini.mk
 else
 PRODUCT_PACKAGES += \
-    GooglePinYin \
-    GoogleIntl \
+    GooglePinyinIME \
+    LatinIMEGooglePrebuilt \
     vim
 # Include MK audio files
 include vendor/mk/config/mk_audio.mk

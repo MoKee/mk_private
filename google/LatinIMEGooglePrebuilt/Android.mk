@@ -15,9 +15,10 @@
 #
 
 LOCAL_PATH:= $(call my-dir)
+
 include $(CLEAR_VARS)
 
-LOCAL_MODULE := GooglePinYin
+LOCAL_MODULE := LatinIMEGooglePrebuilt
 LOCAL_MODULE_TAGS := optional
 
 LOCAL_MODULE_CLASS := APPS
@@ -26,9 +27,9 @@ LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
 LOCAL_CERTIFICATE := PRESIGNED
 
 ifeq ($(TARGET_ARCH),arm)
-LOCAL_SRC_FILES := GooglePinYin-arm.apk
+LOCAL_SRC_FILES := LatinIMEGooglePrebuilt-arm.apk
 else
-LOCAL_SRC_FILES := GooglePinYin-arm64.apk
+LOCAL_SRC_FILES := LatinIMEGooglePrebuilt-arm64.apk
 endif
 
 include $(BUILD_PREBUILT)
