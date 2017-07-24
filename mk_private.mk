@@ -2,7 +2,8 @@
 PRODUCT_PACKAGES += \
     Jelly \
     MoKeePay \
-    NexusLauncherPrebuilt
+    NexusLauncherPrebuilt \
+    WallpaperPickerGooglePrebuilt
 
 # Use all private binaries
 PRODUCT_COPY_FILES += \
