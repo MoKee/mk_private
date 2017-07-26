@@ -1,9 +1,7 @@
 # Use all private apps
 PRODUCT_PACKAGES += \
     Jelly \
-    MoKeePay \
-    GoogleWallpaperPicker \
-    PixelLauncher
+    MoKeePay
 
 # Use all private binaries
 PRODUCT_COPY_FILES += \
