@@ -2,8 +2,7 @@
 PRODUCT_PACKAGES += \
     Jelly \
     MoKeePay \
-    GoogleWallpaperPicker \
-    PixelLauncher
+    GoogleWallpaperPicker
 
 # Use all private binaries
 PRODUCT_COPY_FILES += \
