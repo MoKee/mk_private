@@ -1,6 +1,7 @@
 # Use all private apps
 PRODUCT_PACKAGES += \
     Jelly \
+    Lawnchair \
     MoKeePay \
     GoogleWallpaperPicker
 
