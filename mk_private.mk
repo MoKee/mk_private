@@ -2,8 +2,7 @@
 PRODUCT_PACKAGES += \
     Jelly \
     Lawnchair \
-    MoKeePay \
-    GoogleWallpaperPicker
+    MoKeePay
 
 # Use all private binaries
 PRODUCT_COPY_FILES += \
