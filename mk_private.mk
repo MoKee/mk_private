@@ -65,6 +65,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libxposed_art \
     XposedBridge \
+    XposedInstaller \
     xposed.prop
 
 ifeq ($(MK_CPU_ABI),arm64-v8a)
