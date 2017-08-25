@@ -1,6 +1,5 @@
 # Use all private apps
 PRODUCT_PACKAGES += \
-    Jelly \
     Lawnchair \
     MoKeePay
 
@@ -27,7 +26,7 @@ SMALL_BOARD_SYSTEMIMAGE_PARTITION := true
 TARGET_BOOTANIMATION_HALF_RES := true
 endif
 
-# Default input method and Jelly apps
+# Default input method
 ifeq ($(filter armeabi armeabi-v7a arm64-v8a,$(MK_CPU_ABI)),)
 PRODUCT_PACKAGES += \
     LatinIME
