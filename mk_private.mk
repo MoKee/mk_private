@@ -52,10 +52,3 @@ endif
 ifneq ($(filter h811 h815 h830 h850,$(MK_BUILD)),)
 WITH_DEXPREOPT := false
 endif
-
-# Built-in Xposed
-# PRODUCT_PACKAGES += \
-#     libxposed_art \
-#     XposedBridge \
-#     XposedInstaller \
-#     xposed.prop
