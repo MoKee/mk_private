@@ -1,6 +1,7 @@
 # Use all private apps
 PRODUCT_PACKAGES += \
     Lawnchair \
+    LawnFeed \
     MoKeePay
 
 # Use all private binaries
