@@ -2,6 +2,7 @@
 PRODUCT_PACKAGES += \
     Jelly \
     Lawnchair \
+    LawnFeed \
     MoKeePay
 
 # Use all private binaries
