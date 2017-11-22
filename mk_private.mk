@@ -63,11 +63,11 @@ PRODUCT_PACKAGES += \
     AudioFX
 
 # Built-in Xposed
-PRODUCT_PACKAGES += \
-    libxposed_art \
-    XposedBridge \
-    XposedInstaller \
-    xposed.prop
+# PRODUCT_PACKAGES += \
+#     libxposed_art \
+#     XposedBridge \
+#     XposedInstaller \
+#     xposed.prop
 
 ifeq ($(MK_CPU_ABI),arm64-v8a)
 PRODUCT_COPY_FILES += \
