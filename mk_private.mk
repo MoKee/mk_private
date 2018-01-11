@@ -1,10 +1,3 @@
-# Use all private apps
-PRODUCT_PACKAGES += \
-    Jelly \
-    Lawnchair \
-    LawnFeed \
-    MoKeePay
-
 # Use all private binaries
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,vendor/private/mokee/bin/$(MK_CPU_ABI),system/bin)
@@ -35,12 +28,11 @@ PRODUCT_PACKAGES += \
 else
 ifeq ($(SMALL_BOARD_SYSTEMIMAGE_PARTITION),true)
 PRODUCT_PACKAGES += \
-    GooglePinYin
+    
 # Include MK audio files
 include vendor/mk/config/mk_audio_mini.mk
 else
-PRODUCT_PACKAGES += \
-    GooglePinYin \
+PRODUCT_PACKAGES += \    
     GoogleIntl \
     vim
 # Include MK audio files
@@ -61,13 +53,6 @@ endif
 # Default sound effects app
 PRODUCT_PACKAGES += \
     AudioFX
-
-# Built-in Xposed
-PRODUCT_PACKAGES += \
-    libxposed_art \
-    XposedBridge \
-    XposedInstaller \
-    xposed.prop
 
 ifeq ($(MK_CPU_ABI),arm64-v8a)
 PRODUCT_COPY_FILES += \
