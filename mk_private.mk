@@ -33,18 +33,16 @@ ifeq ($(filter armeabi armeabi-v7a arm64-v8a,$(MK_CPU_ABI)),)
 PRODUCT_PACKAGES += \
     LatinIME
 else
-ifeq ($(SMALL_BOARD_SYSTEMIMAGE_PARTITION),true)
 PRODUCT_PACKAGES += \
-    GooglePinYin
+    GoogleIntl
+ifeq ($(SMALL_BOARD_SYSTEMIMAGE_PARTITION),true)
 # Include MK audio files
 include vendor/mk/config/mk_audio_mini.mk
 else
-PRODUCT_PACKAGES += \
-    GooglePinYin \
-    GoogleIntl \
-    vim
 # Include MK audio files
 include vendor/mk/config/mk_audio.mk
+PRODUCT_PACKAGES += \
+    vim
 endif
 endif
 
