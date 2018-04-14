@@ -25,6 +25,7 @@ PRODUCT_COPY_FILES += \
 ifneq ($(filter armani condor deb dior falcon flo i9100 mako maserati spyder targa tomato umts_spyder,$(MK_BUILD)),)
 SMALL_BOARD_SYSTEMIMAGE_PARTITION := true
 TARGET_BOOTANIMATION_HALF_RES := true
+USE_REDUCED_CJK_FONT_WEIGHTS := true
 endif
 
 # Default input method apps
