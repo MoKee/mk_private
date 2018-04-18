@@ -52,7 +52,7 @@ WITH_DEXPREOPT := false
 endif
 
 # Disable dex-preopt of some devices to fix compile.
-ifneq ($(filter h811 h815 h830 h850 kccat6 lentislte z2pro zl1,$(MK_BUILD)),)
+ifneq ($(filter h811 h815 h830 h850 jason kccat6 kiwi lentislte nx510j s2 z2pro zl1,$(MK_BUILD)),)
 WITH_DEXPREOPT := false
 endif
 
