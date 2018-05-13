@@ -36,20 +36,18 @@ PRODUCT_PACKAGES += \
 else
 PRODUCT_PACKAGES += \
     GoogleIntl
+endif
+
+# Disable dex-preopt of some devices to save space.
 ifeq ($(SMALL_BOARD_SYSTEMIMAGE_PARTITION),true)
 # Include MK audio files
 include vendor/mk/config/mk_audio_mini.mk
+WITH_DEXPREOPT := false
 else
 # Include MK audio files
 include vendor/mk/config/mk_audio.mk
 PRODUCT_PACKAGES += \
     vim
-endif
-endif
-
-# Disable dex-preopt of some devices to save space.
-ifeq ($(SMALL_BOARD_SYSTEMIMAGE_PARTITION),true)
-WITH_DEXPREOPT := false
 endif
 
 # Disable dex-preopt of some devices to fix compile.
