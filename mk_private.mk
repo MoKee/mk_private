@@ -64,11 +64,3 @@ PRODUCT_PACKAGES += \
     XposedBridge \
     XposedInstaller \
     xposed.prop
-
-ifeq ($(MK_CPU_ABI),arm64-v8a)
-PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*.so,vendor/private/mokee/lib/$(MK_CPU_ABI),system/lib64)
-else
-PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*.so,vendor/private/mokee/lib/$(MK_CPU_ABI),system/lib)
-endif
