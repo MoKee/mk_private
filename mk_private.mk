@@ -72,19 +72,3 @@ else
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*.so,vendor/private/mokee/lib/$(MK_CPU_ABI),system/lib)
 endif
-
-# V4a modules
-# ifeq ($(filter armeabi armeabi-v7a x86,$(MK_CPU_ABI)),)
-# PRODUCT_PACKAGES += \
-#     AudioFX
-# else
-# ifneq ($(filter shamu victara victara_retcn, $(MK_BUILD)),)
-# PRODUCT_PACKAGES += \
-#     AudioFX
-# else
-# PRODUCT_PACKAGES += \
-#     ViPER4Android
-# endif
-# PRODUCT_COPY_FILES += \
-#     $(call find-copy-subdir-files,*.so,vendor/private/viper/lib/$(MK_CPU_ABI),system/lib)
-# endif
