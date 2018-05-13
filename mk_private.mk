@@ -2,7 +2,8 @@
 PRODUCT_PACKAGES += \
     Lawnchair \
     LawnFeed \
-    MoKeePay
+    MoKeePay \
+    ViaBrowser
 
 # Use all private binaries
 PRODUCT_COPY_FILES += \
