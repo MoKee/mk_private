@@ -20,7 +20,6 @@ include $(CLEAR_VARS)
 
 LOCAL_MODULE := ViaBrowser
 LOCAL_MODULE_TAGS := optional
-LOCAL_PRIVILEGED_MODULE := true
 
 LOCAL_SRC_FILES := ViaBrowser.apk
 
