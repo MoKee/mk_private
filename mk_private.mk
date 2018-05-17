@@ -3,6 +3,7 @@ PRODUCT_PACKAGES += \
     Lawnchair \
     LawnFeed \
     MoKeePay \
+    Phonograph \
     ViaBrowser
 
 # Use all private binaries
