@@ -2,6 +2,7 @@
 PRODUCT_PACKAGES += \
     Lawnchair \
     LawnFeed \
+    LeafPic \
     MoKeePay \
     Phonograph \
     ViaBrowser
