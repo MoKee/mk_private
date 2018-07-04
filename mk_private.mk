@@ -25,7 +25,7 @@ endif
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,mokee-phonelocation.dat,vendor/private/mokee/common/media/location,system/media/location)
 
-ifneq ($(filter armani condor deb dior falcon find7 flo i9100 mako maserati spyder targa tomato umts_spyder,$(MK_BUILD)),)
+ifneq ($(filter armani condor deb dior falcon find7 flo i9100 mako maserati spyder targa tomato umts_spyder wt88047,$(MK_BUILD)),)
 SMALL_BOARD_SYSTEMIMAGE_PARTITION := true
 TARGET_BOOTANIMATION_HALF_RES := true
 USE_REDUCED_CJK_FONT_WEIGHTS := true
