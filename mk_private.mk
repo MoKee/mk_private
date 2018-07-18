@@ -56,3 +56,10 @@ endif
 ifneq ($(filter h811 h815 h830 h850,$(MK_BUILD)),)
 WITH_DEXPREOPT := false
 endif
+
+# Use MoKee build keys
+ifneq ($(filter HISTORY NIGHTLY RELEASE,$(MK_BUILDTYPE)),)
+ifneq (${DEFAULT_MOKEE_CERTIFICATE},)
+PRODUCT_DEFAULT_DEV_CERTIFICATE := ${DEFAULT_MOKEE_CERTIFICATE}/releasekey
+endif
+endif
