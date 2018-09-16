@@ -1,4 +1,4 @@
-# Copyright (C) 2013-2017 The MoKee Open Source Project
+# Copyright (C) 2017-2018 The MoKee Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -16,20 +16,7 @@ LOCAL_PATH:= $(call my-dir)
 
 include $(CLEAR_VARS)
 
-LOCAL_MODULE := mokee-push
-
-LOCAL_MODULE_TAGS := optional
-LOCAL_STATIC_JAVA_LIBRARIES := \
-    jcore \
-    jpush
-
-LOCAL_NO_STANDARD_LIBRARIES := true
-
-include $(BUILD_STATIC_JAVA_LIBRARY)
-
-include $(CLEAR_VARS)
 LOCAL_PREBUILT_STATIC_JAVA_LIBRARIES := \
-    jcore:jcore$(COMMON_JAVA_PACKAGE_SUFFIX) \
-    jpush:jpush$(COMMON_JAVA_PACKAGE_SUFFIX)
+    mokee-libsuperuser:libsuperuser.aar \
 
 include $(BUILD_MULTI_PREBUILT)
