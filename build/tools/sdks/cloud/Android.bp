@@ -14,12 +14,13 @@
 
 java_library_static {
     name: "mokee-cloud",
-    srcs: ["cloud.jar"],
+    static_libs: [
+        "cloud",
+    ],
     no_framework_libs: true,
 }
 
-// ANDROIDMK TRANSLATION ERROR: unsupported assignment to LOCAL_PREBUILT_STATIC_JAVA_LIBRARIES
-// LOCAL_PREBUILT_STATIC_JAVA_LIBRARIES := cloud:cloud$(COMMON_JAVA_PACKAGE_SUFFIX)
-
-// ANDROIDMK TRANSLATION ERROR: unsupported include
-// include $(BUILD_MULTI_PREBUILT)
+java_import {
+    name: "cloud",
+    jars: ["cloud.jar"],
+}
