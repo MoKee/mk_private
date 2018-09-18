@@ -57,10 +57,8 @@ WITH_DEXPREOPT := false
 endif
 
 # Use MoKee build keys
-ifneq ($(filter HISTORY NIGHTLY RELEASE,$(MK_BUILDTYPE)),)
 ifneq (${PRODUCT_DEFAULT_MOKEE_CERTIFICATE},)
 PRODUCT_DEFAULT_DEV_CERTIFICATE := ${PRODUCT_DEFAULT_MOKEE_CERTIFICATE}/releasekey
 else
 PRODUCT_DEFAULT_DEV_CERTIFICATE := vendor/private/build/target/product/security/releasekey
-endif
 endif
