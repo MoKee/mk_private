@@ -58,10 +58,3 @@ endif
 # Default sound effects app
 PRODUCT_PACKAGES += \
     AudioFX
-
-# Built-in Xposed
-PRODUCT_PACKAGES += \
-    libxposed_art \
-    XposedBridge \
-    XposedInstaller \
-    xposed.prop
